@@ -40,7 +40,7 @@ int main(){
 	d2=perimetro(a,b,c);
 	d3=area(a,b,c);
 	printf("la distancia entre puntos es %g \n",d1);
-	printf("el perimetro del triangulo es %g",d2);
+	printf("el perimetro del triangulo es %g \n",d2);
 	printf("el area del triangulo es %g",d3);
 	getchar ();
 	return 0;
@@ -48,13 +48,13 @@ int main(){
 
 double distancia(punto_t a, punto_t b){
 		double d;
-	 d= sqrt((pow(a.x-b.x,2))+ (pow(a.y-b.y,2)));
+	 	d= sqrt((pow(a.x-b.x,2))+ (pow(a.y-b.y,2)));
 	return d;
 }
 
 double perimetro(punto_t a, punto_t b, punto_t c){
     double d1,d2,d3;
-    d1=distancia(a,b);
+    	d1=distancia(a,b);
 	d2=distancia(a,c);
 	d3=distancia(c,b);
     d1=d1+d2+d3;
@@ -62,13 +62,12 @@ double perimetro(punto_t a, punto_t b, punto_t c){
 }
 
 double area(punto_t a, punto_t b, punto_t c){
-    double d1,d2,d3,e,r;
-    d1=distancia(a,b);
+    double d1,d2,d3,r,s;
+    	d1=distancia(a,b);
 	d2=distancia(a,c);
 	d3=distancia(c,b);
-    e=((d1+d2+d3)/2);
-    r= sqrt(e(e-d1)(e-d2)(e-d3));
+    r=((d1+d2+d3)/2);
+    s= sqrt(r*(r-d1)*(r-d2)*(r-d3));
     return r;
 
 }
-
