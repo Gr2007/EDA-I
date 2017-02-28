@@ -1,0 +1,21 @@
+EDA I														2017-2
+Granados Villeda Johan Raciel 
+Grupo 13 
+
+Crear un bloque de memoria para un conjunto de datos y   mostrar en  pantalla el detalle dicho
+bloque
+
+1.- ¿Que que pasa con el contenido y como es el direccionamiento de la MD?
+
+	R= El direccionamiento es continuo, pero el contenido es basura en el caso de MALLOC, en CALLOC el direccionamiento es continuo pero el contenido es 0.
+
+
+2.- Redimensionar el bloque de memoria al triple del tamaño (el  tripe del primero) mostrar en pantalla el detalle la memoria.
+¿Que que pasa con el contenido y como es el direccionamiento de la MD  después de expandirlo?
+
+	R= El contenido es el mismo, el direccionamiento sigue siendo continuo, usando CALLOC sucede lo mismo pero la parte redimensionada o los nuevos bloques no estan inicializados en 0.
+
+3.- Diseñar un escenario para redimensionar un bloque de memoria en un estado inicial limpio y con un direccionamiento distinto, después de hacer el redimensionamiento.
+
+	R= Para esta parte use un arreglo temporal despues del primero para forzar a REALLOC a mover el contenido a otra direccion de memoria y con un ciclo FOR inicialice todo en 0 como lo haria CALLOC, tuve duda en si solo la parte redimensionada tenia que estar en un estado inicial limpio, pero con el ciclo FOR se puede inicializar todo o solo la parte redimensionada sin problema alguno.
+
