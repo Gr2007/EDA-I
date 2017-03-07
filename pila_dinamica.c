@@ -50,8 +50,9 @@ int pop(pila_t *p)
 	v=(p->tope)->valor;
    // Asignar un apuntador temporal al nodo a ser eliminado
 	nodo_t *aux;
+		aux=p->tope;
    // Actulizar la referencia de la pila del ulimo nodo al que es el penultimo
-     aux=(p->tope)->sig;
+    p->tope=(p->tope)->sig;
    // Liberar la memoria del ultimo nodo
   free(aux);
 
@@ -66,11 +67,24 @@ int  main(int argc, char *args[]) {
 
   push(pila, 1);
   push(pila, 2);
-
-  int a = pop(pila_A);
+/*
+  push(pila, 0);
+  push(pila, 1);
+ int a,b,c,n=10,i;
+ for(i=2;i<n;i++){
+	 a=pop(pila);
+	 b=pop(pila);
+	 c=a+b;
+	 //printf("%d",c); sin imprimir stack
+	 push(pila,b);
+	 push(pila,a);
+	 push(pila,c);
+ }
+*/
+  int a = pop(pila);
 
   printf(" %d \n", a );
-  printf(" %d \n", pop(pila_A) );
+  printf(" %d \n", pop(pila) );
   /*  La salida debe ser
       2
       1
