@@ -235,7 +235,7 @@ int main()
 			break;
 
 			case suprim:
-				deleteQ(q);
+			deleteQ(q);
 			break;
 
 			case impTodos:
@@ -244,11 +244,11 @@ int main()
   			#else
   			system("clear");
   			#endif
-				printQ( q );
+			printQ( q );
 			break;
 
-            case continuar:
-            #ifdef _WIN32
+           		 case continuar:
+        	        #ifdef _WIN32
         		system("cls");
   			#else
   			system("clear");
